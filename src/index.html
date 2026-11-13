@@ -1,36 +1,30 @@
-<!-- #region head -->
 <!doctype html>
-<html
-  class="page"
-  lang="en"
->
+<html class="page" lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Bike</title>
+    <link rel="stylesheet" href="./styles/main.scss" />
     <link
-      rel="stylesheet"
-      href="./styles/main.scss"
-    />
-    <script
-      src="scripts/main.js"
-      defer
-    ></script>
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
+      rel="preload"
+      href="./fonts/poppins-v24-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@400,700,800&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="./fonts/poppins-v24-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="./fonts/poppins-v24-latin-800.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
     />
     <link
       rel="icon"
@@ -38,39 +32,27 @@
       href="./images/favicon.png"
     />
   </head>
-  <!-- #endregion -->
   <body class="page__body">
     <header class="header">
       <div class="container">
         <div class="header__content">
           <div class="top-bar">
-            <a
-              href="#"
-              class="top-bar__logo-link"
-            >
+            <a href="#" class="top-bar__logo-link">
               <img
                 src="images/logo.png"
                 alt="Bose logo"
                 class="top-bar__logo"
+                loading="lazy"
               />
             </a>
             <div class="top-bar__icons">
               <div class="top-bar__block-phone">
-                <a
-                  class="top-bar__phone-number"
-                  href="tel:+1234567890"
-                >
+                <a class="top-bar__phone-number" href="tel:+1234567890">
                   +1 234 555-55-55
                 </a>
-                <a
-                  class="icon icon--phone"
-                  href="tel:+1234567890"
-                ></a>
+                <a class="icon icon--phone" href="tel:+1234567890"></a>
               </div>
-              <a
-                href="#menu"
-                class="icon icon--menu"
-              ></a>
+              <a href="#menu" class="icon icon--menu"></a>
             </div>
           </div>
           <div class="header__bottom">
@@ -80,84 +62,45 @@
       </div>
     </header>
 
-    <aside
-      class="menu page__menu"
-      id="menu"
-    >
+    <aside class="menu page__menu" id="menu">
       <div class="container">
         <div class="top-bar menu__top">
-          <a
-            href="#"
-            class="top-bar__logo"
-          >
+          <a href="#" class="top-bar__logo">
             <img
               class="menu__logo"
               src="images/logo-black.png"
               alt="Bose logo"
+              loading="lazy"
             />
           </a>
           <div class="header__icons">
-            <a
-              href="#"
-              class="icon icon--close"
-            ></a>
+            <a href="#" class="icon icon--close"></a>
           </div>
         </div>
         <div class="menu__botton">
           <nav class="nav nav__menu">
             <ul class="nav__list">
               <li class="nav__item">
-                <a
-                  class="nav__link"
-                  href="#"
-                >
-                  Home
-                </a>
+                <a class="nav__link" href="#"> Home </a>
               </li>
               <li class="nav__item">
-                <a
-                  class="nav__link"
-                  href="#about-us"
-                >
-                  About Us
-                </a>
+                <a class="nav__link" href="#about-us"> About Us </a>
               </li>
               <li class="nav__item">
-                <a
-                  class="nav__link"
-                  href="#compare-bikes"
-                >
-                  Compare Bikes
-                </a>
+                <a class="nav__link" href="#compare-bikes"> Compare Bikes </a>
               </li>
               <li class="nav__item">
-                <a
-                  class="nav__link"
-                  href="#details"
-                >
-                  Details
-                </a>
+                <a class="nav__link" href="#details"> Details </a>
               </li>
               <li class="nav__item">
-                <a
-                  class="nav__link"
-                  href="#contacts"
-                >
-                  Contacts
-                </a>
+                <a class="nav__link" href="#contacts"> Contacts </a>
               </li>
             </ul>
           </nav>
-          <a
-            href="tel:+1 234 5555-55-55"
-            class="menu__phone-number"
-          >
+          <a href="tel:+1 234 5555-55-55" class="menu__phone-number">
             +1 234 5555-55-55
           </a>
-          <a
-            href="tel:+1 234 5555-55-55"
-            class="menu__call-to-order"
-          >
+          <a href="tel:+1 234 5555-55-55" class="menu__call-to-order">
             Book a test ride
           </a>
         </div>
@@ -167,10 +110,7 @@
     <main class="main">
       <div class="container">
         <div class="main__content">
-          <section
-            class="about"
-            id="about-us"
-          >
+          <section class="about" id="about-us">
             <h2
               class="about__title section-title section-title--margin-short section-title--align-left"
             >
@@ -181,10 +121,7 @@
               city as the bike adapts intuitively to power the speed you need.
             </p>
           </section>
-          <section
-            class="compare"
-            id="compare-bikes"
-          >
+          <section class="compare" id="compare-bikes">
             <h2 class="section-title">Compare Bikes</h2>
             <div class="compare__products">
               <article class="product compare__product">
@@ -192,6 +129,7 @@
                   src="images/Sporty 4.png"
                   alt="Sporty 4"
                   class="product__photo"
+                  loading="lazy"
                 />
                 <h3 class="product__title">Sporty 4</h3>
                 <p class="product__description">
@@ -205,6 +143,7 @@
                   src="images/Ride in town ST.png"
                   alt="Ride in town ST"
                   class="product__photo"
+                  loading="lazy"
                 />
                 <h3 class="product__title">Ride in town ST</h3>
                 <p class="product__description">
@@ -218,6 +157,7 @@
                   src="images/Agile ride 3.png"
                   alt="Agile ride 3"
                   class="product__photo"
+                  loading="lazy"
                 />
                 <h3 class="product__title">Agile ride 3</h3>
                 <p class="product__description">
@@ -228,34 +168,27 @@
               </article>
             </div>
           </section>
-          <section
-            class="details"
-            id="details"
-          >
+          <section class="details" id="details">
             <h2 class="section-title">The Details</h2>
 
             <div class="details__wrapper">
               <article class="detail">
                 <div class="detail__photos">
-                  <a
-                    href="#"
-                    class="detail__link detail__link--wide"
-                  >
+                  <a href="#" class="detail__link detail__link--wide">
                     <img
                       class="detail__photo"
                       src="./images/details/Auto Unlock - wide.png"
                       alt="Auto Unlock - wide"
+                      loading="lazy"
                     />
                   </a>
 
-                  <a
-                    href="#"
-                    class="detail__link detail__link--square"
-                  >
+                  <a href="#" class="detail__link detail__link--square">
                     <img
                       class="detail__photo"
                       src="./images/details/Auto Unlock - square.png"
                       alt="Auto Unlock - square"
+                      loading="lazy"
                     />
                   </a>
                 </div>
@@ -272,25 +205,21 @@
 
               <article class="detail">
                 <div class="detail__photos">
-                  <a
-                    href="#"
-                    class="detail__link detail__link--wide"
-                  >
+                  <a href="#" class="detail__link detail__link--wide">
                     <img
                       class="detail__photo"
                       src="./images/details/Range & Integrated lights - wide.png"
                       alt="Range & Integrated lights - wide"
+                      loading="lazy"
                     />
                   </a>
 
-                  <a
-                    href="#"
-                    class="detail__link detail__link--square"
-                  >
+                  <a href="#" class="detail__link detail__link--square">
                     <img
                       class="detail__photo"
                       src="./images/details/Range & Integrated lights - square.png"
                       alt="Range & Integrated lights - square"
+                      loading="lazy"
                     />
                   </a>
                 </div>
@@ -307,25 +236,21 @@
 
               <article class="detail">
                 <div class="detail__photos">
-                  <a
-                    href="#"
-                    class="detail__link detail__link--square"
-                  >
+                  <a href="#" class="detail__link detail__link--square">
                     <img
                       class="detail__photo"
                       src="./images/details/Hydraulic disc brakes & Lightweight - square.png"
                       alt="Hydraulic disc brakes & Lightweight - square"
+                      loading="lazy"
                     />
                   </a>
 
-                  <a
-                    href="#"
-                    class="detail__link detail__link--wide"
-                  >
+                  <a href="#" class="detail__link detail__link--wide">
                     <img
                       class="detail__photo"
                       src="./images/details/Hydraulic disc brakes & Lightweight - wide.png"
                       alt="Hydraulic disc brakes & Lightweight - wide"
+                      loading="lazy"
                     />
                   </a>
                 </div>
@@ -348,16 +273,13 @@
               <button class="details__button">Explore</button>
             </div>
           </section>
-          <section
-            class="contact"
-            id="contacts"
-          >
+          <section class="contact" id="contacts">
             <h2 class="section-title">Contact us</h2>
             <div class="contact__grid-block">
               <form
                 class="form"
                 action="#"
-                method="post"
+                method="POST"
                 onsubmit="this.reset(); return false;"
               >
                 <input
@@ -389,19 +311,13 @@
               <div class="contact__blocks">
                 <div class="contact__block">
                   <p class="contact__block-name">Phone</p>
-                  <a
-                    class="contact__info"
-                    href="tel:+1234567890"
-                  >
+                  <a class="contact__info" href="tel:+1234567890">
                     +1 234 567 890
                   </a>
                 </div>
                 <div class="contact__block">
                   <p class="contact__block-name">Email</p>
-                  <a
-                    class="contact__info"
-                    href="mailto:hello@miami.com"
-                  >
+                  <a class="contact__info" href="mailto:hello@miami.com">
                     hello@miami.com
                   </a>
                 </div>
